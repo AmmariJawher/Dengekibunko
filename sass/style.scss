@@ -1,0 +1,51 @@
+@import "variables";
+
+body {
+    all: unset;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1070px;
+    margin: 0 auto;
+}
+.desktop-header {
+    background: $secondary;
+    height: 120px;
+    color: $primary;
+    margin: 0;
+}
+
+.desktop-header-logo {
+    display: inline;
+    float: left;
+    margin: 25px 10px 0 0;
+
+    .logo-symbole {
+        float: left;
+        height: 78px;
+    }
+
+    .logo-text {
+        float: left;
+        
+        p {
+            margin: 0 0 10px 15px;    
+            word-spacing: 4px;
+        }
+        img {
+
+            height: 42px;
+            width: auto;
+            position: relative;
+            left: -10px;
+        }
+    }
+    
+}
+
+.desktop-header-nav {
+    float: left;
+}
+
