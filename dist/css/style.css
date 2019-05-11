@@ -1,0 +1,137 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  all: unset;
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+.desktop-header {
+  background: #211f20;
+  height: 120px;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+}
+
+.desktop-header-logo {
+  float: left;
+  margin: 25px 10px 0 0;
+}
+
+.desktop-header-logo .logo-symbole {
+  float: left;
+  height: 78px;
+}
+
+.desktop-header-logo .logo-text {
+  float: left;
+}
+
+.desktop-header-logo .logo-text p {
+  margin: 0 0 10px 15px;
+  word-spacing: 4px;
+}
+
+.desktop-header-logo .logo-text img {
+  height: 42px;
+  width: auto;
+  position: relative;
+  left: -10px;
+}
+
+.desktop-header-nav {
+  float: left;
+}
+
+.desktop-header-nav_searchbar {
+  margin-top: 11px;
+}
+
+.desktop-header-nav_searchbar form {
+  margin-right: 5px;
+  display: inline;
+  border: #bdbcbd 7px solid;
+  border-radius: 7px;
+  background: #bdbcbd;
+}
+
+.desktop-header-nav_searchbar form input {
+  width: 230px;
+  border: none;
+  background: none;
+  color: #211f20;
+  font-weight: 800;
+}
+
+.desktop-header-nav_searchbar form button {
+  background: #211f20;
+  border-radius: 5px;
+  border: none;
+  height: 24px;
+  color: #ffffff;
+  font-size: .7em;
+  cursor: pointer;
+}
+
+.desktop-header-nav_searchbar .btn {
+  background: none;
+  padding: 7px 15px;
+  border: #ffffff 1px solid;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.desktop-header-nav_searchbar .btn:hover {
+  opacity: 0.5;
+}
+
+.desktop-header-nav_searchbar .socialmedia {
+  float: right;
+  margin: -11px 0 0 8px;
+  font-size: 10px;
+  color: #ffffff;
+  line-height: 0%;
+}
+
+.desktop-header-nav_searchbar .socialmedia li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  width: 60px;
+  height: 37px;
+  background: #3b5998;
+  text-align: center;
+  margin-left: -3px;
+}
+
+.desktop-header-nav_searchbar .socialmedia li:nth-child(1) {
+  background: #3b5998;
+}
+
+.desktop-header-nav_searchbar .socialmedia li:nth-child(2) {
+  background: #1da1f2;
+}
+
+.desktop-header-nav_searchbar .socialmedia li:nth-child(3) {
+  background: #00b900;
+}
+
+.desktop-header-nav_searchbar .socialmedia li:nth-child(4) {
+  background: #00a1de;
+}
+
+.desktop-header-nav_searchbar .socialmedia a {
+  position: relative;
+  top: 20px;
+}
+/*# sourceMappingURL=style.css.map */
