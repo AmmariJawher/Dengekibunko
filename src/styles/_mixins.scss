@@ -1,0 +1,33 @@
+@mixin btn {
+    background: $secondary;
+    border-radius: 5px;
+    padding: 6px 10px;
+    color: $primary;
+    font-size: .7em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bright-animation {
+    transition: .3s;
+}
+.bright-animation:hover {
+    filter: brightness(50%);
+    transition: .3s;
+}
+
+.fade-animation:hover {
+    opacity: 0.5;
+    transition: .3s;
+}
+
+.btn-primary {
+    @include btn;
+}
+
+.btn-secondary {
+    @include btn;
+    border: $accent 1px solid;
+    background: #ffffff;
+    color: $accent;
+}
