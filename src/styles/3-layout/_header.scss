@@ -1,17 +1,13 @@
-@import "variables";
-@import "reset";
-@import "mixins";
-
 .desktop-header {
-    background: $secondary;
-    height: 120px;
+    //background: $secondary;
+    height: 110px;
     color: $primary;
     margin: 0;
     position: relative;
 
 }
 
-.desktop-header-logo {
+.desktop-header_logo {
     float: left;
     margin: 25px 15px 0 0;
 
@@ -24,9 +20,10 @@
         float: left;
 
         p {
-            margin: 0 0 10px 15px;    
+            margin: 0 0 10px 15px;
             word-spacing: 4px;
         }
+
         img {
             height: 42px;
             width: auto;
@@ -34,19 +31,19 @@
             left: -10px;
         }
     }
-    
+
 }
 
 .desktop-header-nav {
     float: left;
 }
 
-.desktop-header-nav_searchbar{
-    margin-top: 11px;
+.desktop-header-nav_searchbar {
     form {
-        margin-right: 5px;
-        padding: 4px 3px 7px 3px;
-        display: inline;
+        margin-top: 8px;
+        margin-right: 0;
+        padding: 3px 3px;
+        display: inline-block;
         border: #bdbcbd 1px solid;
         border-radius: 7px;
         background: #bdbcbd;
@@ -56,14 +53,16 @@
             vertical-align: middle;
             margin-left: 5px;
         }
+
         input {
-            width: 200px;
+            width: 210px;
             border: none;
             background: none;
             color: $secondary;
             margin-left: 7px;
             font-weight: bold;
         }
+
         a {
             vertical-align: middle;
         }
@@ -77,10 +76,9 @@
 
     .socialmedia {
         float: right;
-        margin: -11px 0 0 8px;
         font-size: 10px;
         color: $primary;
-        line-height: 0%;
+        margin: 0 0 0 0;
 
         li {
             display: inline-block;
@@ -96,19 +94,61 @@
         li:nth-child(1) {
             background: #3b5998;
         }
+
+        li:nth-child(1)::before {
+            font-family: "Font Awesome 5 Brands";
+            content: '\f082';
+            font-size: 1.7em;
+            position: absolute;
+            top: 3px;
+            right: 39%;
+        }
+
         li:nth-child(2) {
             background: #1da1f2;
         }
+
+        li:nth-child(2)::before {
+            font-family: "Font Awesome 5 Brands";
+            content: '\f099';
+            font-size: 1.7em;
+            position: absolute;
+            top: 3px;
+            right: 39%;
+        }
+
+
         li:nth-child(3) {
             background: #00b900;
         }
+
+        li:nth-child(3)::before {
+            font-family: "Font Awesome 5 Brands";
+            content: '\f3c0';
+            font-size: 1.7em;
+            position: absolute;
+            top: 3px;
+            right: 39%;
+        }
+
+
         li:nth-child(4) {
             background: #00a1de;
         }
 
+        li:nth-child(4)::before {
+            font-family: "Font Awesome 5 Brands";
+            content: '\f0e1';
+            font-size: 1.7em;
+            position: absolute;
+            top: 3px;
+            right: 39%;
+        }
+
+
         a {
             position: relative;
-            top: 20px;
+            top: 23px;
         }
     }
 }
@@ -122,7 +162,7 @@
         margin-top: 10px;
         list-style: none;
         padding: 0 10px;
-    
+
         .main-menu_item {
             float: left;
             text-align: center;
@@ -134,60 +174,122 @@
             color: $secondary;
             font-size: 0.9em;
             font-weight: bold;
+            cursor: default;
+
             a {
                 color: $secondary;
                 display: block;
-                cursor: default;
             }
+
             i {
                 font-size: 1.5em;
-                margin-right: 15px; 
+                margin-right: 15px;
             }
+
             .sub-menu {
-                text-align: center;
                 background: #ff587f;
+                border-top: #bdbcbd 1px solid;
                 height: 130px;
-                padding: 0 30px;
+                z-index: 1;
+                padding: 0 20px;
                 width: auto;
-                display: flex;
-                flex-direction: row;
+                position: absolute;
+                top: 100%;
                 list-style: none;
-                justify-content: center;
-                    li {
+                display: none;
+
+                li {
                     text-align: center;
-                    width: 150;
-                        a {
-                        padding: 20px;
-                        justify-content: center;
+                    width: 150px;
+
+                    a {
+                        padding: 15px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        font-size: .8em;
+                        text-align: center;
+                        line-height: 25px;
+                        color: #ffffff;
+                        cursor: pointer;
+
+                        img {
+                            border-radius: 50%;
+                            vertical-align: center;
+                        }
                     }
                 }
             }
         }
+
+        .main-menu_item:hover>.sub-menu {
+            display: flex;
+        }
+
+        // 3 Main implementation:
+        // - SVG Icons has diffrent color in each Main Menu Item.
+        // - Sub Menu background color is the same as the parent menu SVG Icon.
+        // - Menus that don't have Sub Menu will have a border at the bottom effected by mouse hover.
+        
+        
+        /* .main-menu_item:nth-child(1)::after {
+            font-family: "Font Awesome 5 Brands";
+            content: '\f0e1';
+            font-size: 1.7em;
+            color: red;
+            position: absolute;
+            top: 3px;
+            right: 39%; */
+        }
         .main-menu_item:nth-child(1)>i {
             color: #ff587f;
+
         }
+
+        .main-menu_item:nth-child(1)>.sub-menu {
+            background: #ff587f;
+        }
+
         .main-menu_item:nth-child(2)>a>i {
             color: #7cbf42;
         }
+
         .main-menu_item:nth-child(2):hover {
             border-bottom: 4px #7cbf42 solid;
         }
+
         .main-menu_item:nth-child(3)>a>i {
             color: #ffb100;
         }
+
         .main-menu_item:nth-child(3):hover {
             border-bottom: 4px #ffb100 solid;
         }
+
         .main-menu_item:nth-child(4)>i {
             color: #1f9fe0;
         }
-        .main-menu_item:nth-child(5)>i  {
-            color: #a170ef; 
+
+        .main-menu_item:nth-child(4)>.sub-menu {
+            background: #1f9fe0;
+        }
+
+        .main-menu_item:nth-child(5)>i {
+            color: #a170ef;
+        }
+
+        .main-menu_item:nth-child(5)>.sub-menu {
+            background: #a170ef;
+            right: 130px;
         }
 
     }
 }
 
 .desktop-header_character {
-    float: right;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: -40px;
+
 }

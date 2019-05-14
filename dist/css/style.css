@@ -26,7 +26,7 @@ a {
 }
 
 .fade-animation:hover {
-  opacity: 0.5;
+  opacity: 0.7;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -57,33 +57,32 @@ a {
 }
 
 .desktop-header {
-  background: #211f20;
-  height: 120px;
+  height: 110px;
   color: #ffffff;
   margin: 0;
   position: relative;
 }
 
-.desktop-header-logo {
+.desktop-header_logo {
   float: left;
   margin: 25px 15px 0 0;
 }
 
-.desktop-header-logo .logo-symbole {
+.desktop-header_logo .logo-symbole {
   float: left;
   height: 78px;
 }
 
-.desktop-header-logo .logo-text {
+.desktop-header_logo .logo-text {
   float: left;
 }
 
-.desktop-header-logo .logo-text p {
+.desktop-header_logo .logo-text p {
   margin: 0 0 10px 15px;
   word-spacing: 4px;
 }
 
-.desktop-header-logo .logo-text img {
+.desktop-header_logo .logo-text img {
   height: 42px;
   width: auto;
   position: relative;
@@ -94,14 +93,11 @@ a {
   float: left;
 }
 
-.desktop-header-nav_searchbar {
-  margin-top: 11px;
-}
-
 .desktop-header-nav_searchbar form {
-  margin-right: 5px;
-  padding: 4px 3px 7px 3px;
-  display: inline;
+  margin-top: 8px;
+  margin-right: 0;
+  padding: 3px 3px;
+  display: inline-block;
   border: #bdbcbd 1px solid;
   border-radius: 7px;
   background: #bdbcbd;
@@ -114,7 +110,7 @@ a {
 }
 
 .desktop-header-nav_searchbar form input {
-  width: 200px;
+  width: 210px;
   border: none;
   background: none;
   color: #211f20;
@@ -134,10 +130,9 @@ a {
 
 .desktop-header-nav_searchbar .socialmedia {
   float: right;
-  margin: -11px 0 0 8px;
   font-size: 10px;
   color: #ffffff;
-  line-height: 0%;
+  margin: 0 0 0 0;
 }
 
 .desktop-header-nav_searchbar .socialmedia li {
@@ -155,21 +150,57 @@ a {
   background: #3b5998;
 }
 
+.desktop-header-nav_searchbar .socialmedia li:nth-child(1)::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f082';
+  font-size: 1.7em;
+  position: absolute;
+  top: 3px;
+  right: 39%;
+}
+
 .desktop-header-nav_searchbar .socialmedia li:nth-child(2) {
   background: #1da1f2;
+}
+
+.desktop-header-nav_searchbar .socialmedia li:nth-child(2)::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f099';
+  font-size: 1.7em;
+  position: absolute;
+  top: 3px;
+  right: 39%;
 }
 
 .desktop-header-nav_searchbar .socialmedia li:nth-child(3) {
   background: #00b900;
 }
 
+.desktop-header-nav_searchbar .socialmedia li:nth-child(3)::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f3c0';
+  font-size: 1.7em;
+  position: absolute;
+  top: 3px;
+  right: 39%;
+}
+
 .desktop-header-nav_searchbar .socialmedia li:nth-child(4) {
   background: #00a1de;
 }
 
+.desktop-header-nav_searchbar .socialmedia li:nth-child(4)::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f0e1';
+  font-size: 1.7em;
+  position: absolute;
+  top: 3px;
+  right: 39%;
+}
+
 .desktop-header-nav_searchbar .socialmedia a {
   position: relative;
-  top: 20px;
+  top: 23px;
 }
 
 .desktop-header-nav_menu .main-menu {
@@ -192,12 +223,12 @@ a {
   color: #211f20;
   font-size: 0.9em;
   font-weight: bold;
+  cursor: default;
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item a {
   color: #211f20;
   display: block;
-  cursor: default;
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item i {
@@ -206,38 +237,69 @@ a {
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item .sub-menu {
-  text-align: center;
   background: #ff587f;
+  border-top: #bdbcbd 1px solid;
   height: 130px;
-  padding: 0 30px;
+  z-index: 1;
+  padding: 0 20px;
   width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  position: absolute;
+  top: 100%;
   list-style: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item .sub-menu li {
   text-align: center;
-  width: 150;
+  width: 150px;
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item .sub-menu li a {
-  padding: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: .8em;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.desktop-header-nav_menu .main-menu .main-menu_item .sub-menu li a img {
+  border-radius: 50%;
+  vertical-align: center;
+}
+
+.desktop-header-nav_menu .main-menu .main-menu_item:hover > .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.desktop-header-nav_menu .main-menu .main-menu_item:nth-child(1)::after {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f0e1';
+  font-size: 1.7em;
+  color: red;
+  position: absolute;
+  top: 3px;
+  right: 39%;
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item:nth-child(1) > i {
   color: #ff587f;
+}
+
+.desktop-header-nav_menu .main-menu .main-menu_item:nth-child(1) > .sub-menu {
+  background: #ff587f;
 }
 
 .desktop-header-nav_menu .main-menu .main-menu_item:nth-child(2) > a > i {
@@ -260,11 +322,23 @@ a {
   color: #1f9fe0;
 }
 
+.desktop-header-nav_menu .main-menu .main-menu_item:nth-child(4) > .sub-menu {
+  background: #1f9fe0;
+}
+
 .desktop-header-nav_menu .main-menu .main-menu_item:nth-child(5) > i {
   color: #a170ef;
 }
 
+.desktop-header-nav_menu .main-menu .main-menu_item:nth-child(5) > .sub-menu {
+  background: #a170ef;
+  right: 130px;
+}
+
 .desktop-header_character {
-  float: right;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  right: -40px;
 }
 /*# sourceMappingURL=style.css.map */
