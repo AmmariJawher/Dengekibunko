@@ -1,3 +1,6 @@
+@import "../2-base/base";
+@import "../0-helpers/helpers";
+
 .desktop-header {
     //background: $secondary;
     height: 110px;
@@ -230,8 +233,8 @@
         // - SVG Icons has diffrent color in each Main Menu Item.
         // - Sub Menu background color is the same as the parent menu SVG Icon.
         // - Menus that don't have Sub Menu will have a border at the bottom effected by mouse hover.
-        
-        
+
+
         /* .main-menu_item:nth-child(1)::after {
             font-family: "Font Awesome 5 Brands";
             content: '\f0e1';
@@ -240,50 +243,50 @@
             position: absolute;
             top: 3px;
             right: 39%; */
-        }
-        .main-menu_item:nth-child(1)>i {
-            color: #ff587f;
+    }
 
-        }
-
-        .main-menu_item:nth-child(1)>.sub-menu {
-            background: #ff587f;
-        }
-
-        .main-menu_item:nth-child(2)>a>i {
-            color: #7cbf42;
-        }
-
-        .main-menu_item:nth-child(2):hover {
-            border-bottom: 4px #7cbf42 solid;
-        }
-
-        .main-menu_item:nth-child(3)>a>i {
-            color: #ffb100;
-        }
-
-        .main-menu_item:nth-child(3):hover {
-            border-bottom: 4px #ffb100 solid;
-        }
-
-        .main-menu_item:nth-child(4)>i {
-            color: #1f9fe0;
-        }
-
-        .main-menu_item:nth-child(4)>.sub-menu {
-            background: #1f9fe0;
-        }
-
-        .main-menu_item:nth-child(5)>i {
-            color: #a170ef;
-        }
-
-        .main-menu_item:nth-child(5)>.sub-menu {
-            background: #a170ef;
-            right: 130px;
-        }
+    .main-menu_item:nth-child(1)>i {
+        color: #ff587f;
 
     }
+
+    .main-menu_item:nth-child(1)>.sub-menu {
+        background: #ff587f;
+    }
+
+    .main-menu_item:nth-child(2)>a>i {
+        color: #7cbf42;
+    }
+
+    .main-menu_item:nth-child(2):hover {
+        border-bottom: 4px #7cbf42 solid;
+    }
+
+    .main-menu_item:nth-child(3)>a>i {
+        color: #ffb100;
+    }
+
+    .main-menu_item:nth-child(3):hover {
+        border-bottom: 4px #ffb100 solid;
+    }
+
+    .main-menu_item:nth-child(4)>i {
+        color: #1f9fe0;
+    }
+
+    .main-menu_item:nth-child(4)>.sub-menu {
+        background: #1f9fe0;
+    }
+
+    .main-menu_item:nth-child(5)>i {
+        color: #a170ef;
+    }
+
+    .main-menu_item:nth-child(5)>.sub-menu {
+        background: #a170ef;
+        right: 130px;
+    }
+
 }
 
 .desktop-header_character {
