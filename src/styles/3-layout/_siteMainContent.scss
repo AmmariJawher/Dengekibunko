@@ -1,7 +1,112 @@
 @import "../2-base/base";
 @import "../0-helpers/helpers";
 
+
 .main-slider {
+    padding: 0;
+    margin: 0;
     background: white;
-    justify-content: center;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+
+    .main-slider-container {
+        width: 840px;
+        margin: auto;
+
+        .main-slider-list {
+            display: flex;
+        }
+
+        .main-slider-controls {
+            position: absolute;
+            top: 0;
+            background: url("../../dist/img/bg-slider.png");
+            border: none;
+            height: 450px;
+            width: calc((100% - 840px) / 2);
+            z-index: 1;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        #main-slider-controls-next {
+            right: 0;
+        }
+
+        #main-slider-controls-next::before {
+            content: "";
+            float: left;
+            font-size: 3.5em;
+            height: 160px;
+            width: 30px;
+            line-height: 4px;
+            color: #ffffff;
+            background-color: rgba(230, 0, 0, .8);
+        }
+
+        #main-slider-controls-prev {
+            left: 0;
+        }
+
+        #main-slider-controls-prev::before {
+            content: "";
+            float: right;
+            font-size: 3.5em;
+            height: 160px;
+            width: 30px;
+            line-height: 4px;
+            color: #ffffff;
+            background-color: rgba(230, 0, 0, .8);
+        }
+    }
+}
+
+
+
+.main-slider-dots {
+    background: url("https://dengekibunko.jp/themes/dengekibunko/images/project/top/bg-band-primary.svg");
+    background-repeat: no-repeat;
+    background-position: 0 -190px;
+    background-size: 200%;
+    height: 200px;
+    padding: 10px 0;
+
+    .slider-dots_nav {
+        div {
+            display: inline-block;
+            margin: 0 10px;
+            background: #ffffff;
+            height: 40px;
+
+            img {
+                border: $secondary solid 3px;
+                width: 65px;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .news {
+        width: 870px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.308);
+
+        .news-icon {
+            display: inline-block;
+            color: $accent;
+            text-align: center;
+            align-content: center;
+
+            i {
+                font-size: 50px;
+            }
+
+            .jp-text {
+                font-size: 30px;
+            }
+
+        }
+    }
 }

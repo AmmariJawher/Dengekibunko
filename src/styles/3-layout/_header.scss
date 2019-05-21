@@ -1,13 +1,47 @@
 @import "../2-base/base";
 @import "../0-helpers/helpers";
 
+.banner-section {
+    text-align: center;
+    height: 110px;
+    background: $secondary;
+    img {
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.header-section {
+    position: relative;
+}
+.header-section::before {
+    content: url("https://dengekibunko.jp/themes/dengekibunko/images/project/top/bg-band-header-grey.svg");
+    position: absolute;
+    display: block;
+    width: auto;
+    top: 0;
+    left: 30vw;
+    z-index: -1;
+    right: calc(((100vw - 1100px) / 2));
+    width: 1850px;
+    height: 326.87px;
+}
+.header-section::after {
+    content: url("https://dengekibunko.jp/themes/dengekibunko/images/project/top/bg-band-header.svg");
+    position: absolute;
+    display: block;
+    width: auto;
+    top: 0;
+    z-index: -1;
+    right: calc(((100vw - 1100px) / 2));
+    width: 1850px;  
+    height: 326.87px;
+}
+
 .desktop-header {
-    //background: $secondary;
     height: 110px;
     color: $primary;
     margin: 0;
     position: relative;
-
 }
 
 .desktop-header_logo {
@@ -162,7 +196,7 @@
         background: rgba(255, 255, 255, 0.8);
         float: left;
         padding: 0;
-        margin-top: 10px;
+        margin: 11px 0;
         list-style: none;
         padding: 0 10px;
 
@@ -294,5 +328,4 @@
     top: 0;
     z-index: -1;
     right: -40px;
-
 }
