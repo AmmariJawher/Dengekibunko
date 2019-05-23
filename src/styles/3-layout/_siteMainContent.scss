@@ -17,6 +17,7 @@
 
         .main-slider-list {
             display: flex;
+            width: 100%;
         }
 
         .main-slider-controls {
@@ -63,23 +64,23 @@
     }
 }
 
-
-
 .main-slider-dots {
     background: url("https://dengekibunko.jp/themes/dengekibunko/images/project/top/bg-band-primary.svg");
     background-repeat: no-repeat;
     background-position: 0 -190px;
     background-size: 200%;
     height: 200px;
-    padding: 10px 0;
-
+    margin: 0;
+    
     .slider-dots_nav {
+        margin-bottom: 7px;
         div {
             display: inline-block;
             margin: 0 10px;
             background: #ffffff;
             height: 40px;
-
+            cursor: pointer;
+            
             img {
                 border: $secondary solid 3px;
                 width: 65px;
@@ -87,26 +88,76 @@
             }
         }
     }
-
     .news {
+        display: flex;
+        margin: auto;
+        padding: 10px 0;
         width: 870px;
-        height: 300px;
-        background: rgba(255, 255, 255, 0.308);
-
-        .news-icon {
-            display: inline-block;
+        background: rgba(255, 255, 255, 0.9);
+        border: $accent solid 1px;
+        
+        .news-logo {
+            padding: 0 45px;
             color: $accent;
-            text-align: center;
             align-content: center;
-
-            i {
+            width: 65px;
+            
+            .news-icon {
+                margin: 0;
                 font-size: 50px;
             }
-
+            
             .jp-text {
+                margin: 0;
+                margin-top: 7px;
                 font-size: 30px;
             }
-
+            .en-text {
+                margin-top: 7px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            
+        }
+        .news-collection {
+            padding-right: 10px;
+            .news-collection-text {
+                display: flex;
+                margin: 20px 0;
+                //TODO: fix ne
+                .news-info {
+                    display: flex;
+                    text-align: center;
+                    padding: 0;
+                    min-width: 238px;
+                    .news-category {
+                        color: #ffffff;
+                        background: #ffa921;
+                        display: block;
+                        font-weight: 900;
+                        font-size: 13px;
+                        width: 138px;
+                        border-radius: 15px;
+                        margin: 0 10px;
+                    }
+                    .news-release-date {
+                        margin-right: 30px;
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 100;
+                    }
+                }
+                .news-title {
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+            }
+            .news-collection-text:nth-child(1) {
+                margin-top: 0;
+            }
+            .news-collection-text:nth-child(3) {
+                margin-bottom: 0;
+            }
         }
     }
 }

@@ -15,3 +15,7 @@ a {
 .clear {
     clear: both;
 }
+
+.non-render-element {
+    display: none;
+}
