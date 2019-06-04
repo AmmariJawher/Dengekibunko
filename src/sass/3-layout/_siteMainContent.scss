@@ -23,7 +23,7 @@
         .main-slider-controls {
             position: absolute;
             top: 0;
-            background: url("../../dist/img/bg-slider.png");
+            background: url("../img/bg-slider.png");
             border: none;
             height: 450px;
             width: calc((100% - 840px) / 2);
@@ -71,16 +71,17 @@
     background-size: 200%;
     height: 200px;
     margin: 0;
-    
+
     .slider-dots_nav {
         margin-bottom: 7px;
+
         div {
             display: inline-block;
             margin: 0 10px;
             background: #ffffff;
             height: 40px;
             cursor: pointer;
-            
+
             img {
                 border: $secondary solid 3px;
                 width: 65px;
@@ -88,6 +89,7 @@
             }
         }
     }
+
     .news {
         display: flex;
         margin: auto;
@@ -95,41 +97,46 @@
         width: 870px;
         background: rgba(255, 255, 255, 0.9);
         border: $accent solid 1px;
-        
+
         .news-logo {
             padding: 0 45px;
             color: $accent;
             align-content: center;
             width: 65px;
-            
+
             .news-icon {
                 margin: 0;
                 font-size: 50px;
             }
-            
+
             .jp-text {
                 margin: 0;
                 margin-top: 7px;
                 font-size: 30px;
             }
+
             .en-text {
                 margin-top: 7px;
                 font-size: 14px;
                 font-weight: 700;
             }
-            
+
         }
+
         .news-collection {
             padding-right: 10px;
+
             .news-collection-text {
                 display: flex;
                 margin: 20px 0;
+
                 //TODO: fix ne
                 .news-info {
                     display: flex;
                     text-align: center;
                     padding: 0;
                     min-width: 238px;
+
                     .news-category {
                         color: #ffffff;
                         background: #ffa921;
@@ -140,6 +147,7 @@
                         border-radius: 15px;
                         margin: 0 10px;
                     }
+
                     .news-release-date {
                         margin-right: 30px;
                         display: block;
@@ -147,17 +155,44 @@
                         font-weight: 100;
                     }
                 }
+
                 .news-title {
                     font-weight: 700;
                     font-size: 14px;
                 }
             }
+
             .news-collection-text:nth-child(1) {
                 margin-top: 0;
             }
+
             .news-collection-text:nth-child(3) {
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+.manga-preview {
+    background: $accent;
+    padding: 20px 0 20px 0;
+
+    .manga-preview_body {
+        background: #e9e9e9;
+        height: auto;
+
+        .manga-pickup {
+            margin-top: 0;
+            background: url("../img/321804000333.jpg");
+            background-position: center top;
+            height: 500px;
+            width: 350px;
+        }
+
+    }
+
+    .manga-preview_footer {
+        background: #ffffff;
+        height: 200px;
     }
 }
